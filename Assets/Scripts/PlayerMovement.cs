@@ -42,8 +42,9 @@ public class PlayerMovement: MonoBehaviour
     public int amountOfMonster;
 
     public AudioSource audioCamera;
+    public AudioSource audioGhost;
 
-
+    public GameObject monster;
 
 
 
@@ -83,6 +84,8 @@ public class PlayerMovement: MonoBehaviour
             audioCamera.Play();
             Debug.Log("Sounded");
         }
+
+        monster = GameObject.FindWithTag("Monster");
 
 
     }
@@ -151,12 +154,22 @@ public class PlayerMovement: MonoBehaviour
         {
             GameObject monster = Instantiate(monsterPrefab[randMonster], randomPos, Quaternion.identity);
             monster.transform.position = randomPos;
+            audioGhost.Play();
+            StartCoroutine(SelfDestruct());
             //amountOfMonster++;
             //isSpawned = true;
             yield return new WaitForSeconds(spawnWait);
         }
 
-    } 
-    
+    }
 
+    IEnumerator SelfDestruct()
+    {
+        yield return new WaitForSeconds(5f);
+
+        //playerMovement.StartCoroutine(playerMovement.waitSpawner());
+
+        Destroy(monster.gameObject);
+        StartCoroutine(waitSpawner());
+    }
 }

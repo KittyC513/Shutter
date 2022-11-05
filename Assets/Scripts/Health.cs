@@ -54,6 +54,6 @@ public class Health : MonoBehaviour
 
     void defeat()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }

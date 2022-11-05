@@ -25,7 +25,7 @@ public class Pickable : MonoBehaviour
         {
             player.GetComponent<Collection>().collection--;
             Destroy(other.gameObject);  
-            Debug.Log(player.GetComponent<Collection>().collection);
+            Debug.Log("Collection");
 
         }
 

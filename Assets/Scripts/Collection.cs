@@ -55,6 +55,6 @@ public class Collection : MonoBehaviour
 
     void wins()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }

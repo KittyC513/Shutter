@@ -168,7 +168,7 @@ Transform:
   - {fileID: 4416099590549205652}
   - {fileID: 4416099591635623546}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4416099592216943266
 MeshFilter:
@@ -260,6 +260,7 @@ MonoBehaviour:
   maxTime: 20
   spawnCount: 1
   amountOfMonster: 0
+  audioCamera: {fileID: 0}
 --- !u!54 &4416099592216943268
 Rigidbody:
   m_ObjectHideFlags: 0

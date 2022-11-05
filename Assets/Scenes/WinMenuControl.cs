@@ -10,7 +10,7 @@ public class WinMenuControl : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.F))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
         if (Input.GetKey(KeyCode.W))
